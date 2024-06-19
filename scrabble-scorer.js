@@ -92,25 +92,19 @@ function scrabbleScorer (scrabbleWord) {
 let simpleScrabble = {
    name : "Simple Score",
    description : "Each letter is worth 1 point.",
-   scorerFunction : function () {
-      return simpleScorer(scoredWord);
-   }
+   scorerFunction : simpleScorer
 }
 
 let vowelScrabble = {
    name : "Bonus Vowels",
    description : "Vowels are 3 points, consonants are 1 point.",
-   scorerFunction : function () {
-      return vowelBonusScorer(scoredWord);
-   }
+   scorerFunction : vowelBonusScorer
 }
 
 let scrabbleScrabble = {
    name : "Scrabble",
    description : "The traditional scoring algorithm.",
-   scorerFunction : function () {
-      return scrabbleScorer(scoredWord);
-   }
+   scorerFunction : scrabbleScorer
 };
 
 const scoringAlgorithms = [simpleScrabble, vowelScrabble, scrabbleScrabble];
